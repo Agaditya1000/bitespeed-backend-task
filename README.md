@@ -66,8 +66,8 @@ PORT=3000
 ```
 
 ## Hosted Endpoint URL
-Once deployed to Render.com, replace the domain to access the live API endpoint:
-**Endpoint**: `https://<YOUR-RENDER-URL>.onrender.com/identify`
+The Identity Reconciliation API is live and hosted on Render.
+**Endpoint**: `https://bitespeed-backend-task-t989.onrender.com/identify`
 
 ## Sample cURL Requests
 
