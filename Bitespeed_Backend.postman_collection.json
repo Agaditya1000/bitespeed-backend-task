@@ -1,0 +1,177 @@
+{
+    "info": {
+        "_postman_id": "ab123456-7890-1234-5678-abcdef123456",
+        "name": "Bitespeed Backend Task",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "1. New Contact",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"email\": \"alice@test.com\",\n  \"phoneNumber\": \"11111\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/identify",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "identify"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "2. Existing Match",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"email\": \"alice@test.com\",\n  \"phoneNumber\": \"11111\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/identify",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "identify"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "3. New Phone / Secondary",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"email\": \"alice@test.com\",\n  \"phoneNumber\": \"22222\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/identify",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "identify"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "4. Only Email",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"email\": \"bob@test.com\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/identify",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "identify"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "5. Only Phone",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"phoneNumber\": \"33333\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/identify",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "identify"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "6. Merge Primaries",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"email\": \"bob@test.com\",\n  \"phoneNumber\": \"33333\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/identify",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "identify"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
