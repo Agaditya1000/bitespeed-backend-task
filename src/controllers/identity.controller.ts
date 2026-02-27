@@ -14,7 +14,7 @@ export const identifyContact = async (req: Request, res: Response, next: NextFun
 
         const contactResponse = await reconcileIdentity(
             email || undefined,
-            phoneNumber || undefined
+            phoneNumber ? String(phoneNumber) : undefined
         );
 
         res.status(200).json({ contact: contactResponse });

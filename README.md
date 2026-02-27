@@ -1,11 +1,17 @@
 # Bitespeed Backend Task – Identity Reconciliation Service
 
-## Project Overview
-This is a production-ready Node.js backend service built with TypeScript and Express.js that consolidates and reconciles customer identities based on email and phone number. The service exposes a `/identify` endpoint that accepts customer contact details and gracefully links them using relational logic, converting independent primary contacts into secondary contacts when new overlapping data merges them.
+# Bitespeed Backend Task – Identity Reconciliation Service
+
+## Problem Statement
+Meet the brilliant yet eccentric Dr. Emmett Brown, better known as Doc. Hopelessly stuck in 2023, he is fixing his time machine to go back to the future and save his friend. His favourite online store FluxKart.com sells all the parts required to build this contraption. As crazy as he might get at times, Doc surely knows how to be careful. To avoid drawing attention to his grandiose project, Doc is using different email addresses and phone numbers for each purchase.
+
+FluxKart decides to integrate Bitespeed into their platform to collect contact details from shoppers for a personalized customer experience. However, given Doc's modus operandi, Bitespeed faces a unique challenge: linking different orders made with different contact information to the same person.
+
+**Our Goal**: Design a web service with an endpoint `/identify` that will receive HTTP POST requests and return a consolidated contact payload.
 
 ## Architecture & Logic Explanation
-The service utilizes **Prisma ORM** over a **PostgreSQL** database:
-- **Controllers**: Validates the payload structure using `Zod` and hands over the processing to the service logic layer.
+The service utilizes **Prisma ORM** over a **PostgreSQL** database, developed using **Node.js with TypeScript**:
+- **Controllers**: Validates the payload structure using `Zod` (requires at least one of `email` or `phoneNumber`) and hands over the processing to the service logic layer.
 - **Service Layer**: 
   - Searches the database for any contacts matching the given `email` or `phoneNumber`.
   - Maps matches to their root `primaryContact`.
