@@ -1,1 +1,8 @@
-node_modules\n.env\ndist\ndev.db\nprisma/dev.db-journal\n
+node_modules
+.env
+dist
+dev.db
+prisma/dev.db-journal
+error.txt
+prisma_error.log
+test_output.txt
